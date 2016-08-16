@@ -14,6 +14,13 @@ describe('phoneList', function() {
       expect(ctrl.phones.length).toBe(3);
     }));
 
+    it('variable name should contain value world', inject(function($componentController) {
+      var ctrl = $componentController('phoneList');
+
+      expect(ctrl.name).toBe('world');
+      })
+    )
+
   });
 
 });

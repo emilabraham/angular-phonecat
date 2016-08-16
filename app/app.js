@@ -1,4 +1,10 @@
 'use strict';
 
 // Define the `phonecatApp` module
-angular.module('phonecatApp', []);
+angular.module('phonecatApp', [])
+  .component('greetUser', {
+    template: 'Hello, {{$ctrl.user}}!',
+    controller: function GreetUserController() {
+      this.user = 'world';
+    }
+});

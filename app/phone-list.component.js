@@ -5,6 +5,8 @@ angular.
   module('phonecatApp').
   component('phoneList', {
     template:
+        '<p>Hello {{$ctrl.name}}!</p>' +
+        '<p>Total number of phones: {{$ctrl.phones.length}}</p>' +
         '<ul>' +
           '<li ng-repeat="phone in $ctrl.phones">' +
             '<span>{{phone.name}}</span>' +
@@ -24,5 +26,7 @@ angular.
           snippet: 'The Next, Next Generation tablet.'
         }
       ];
+
+      this.name = 'world';
     }
   });
