@@ -23,7 +23,7 @@ describe('phoneList', function() {
     it('should create a `phones` property with 2 phones fetched with `$http`', function() {
       expect(ctrl.phones).toBeUndefined();
 
-      $httpBackend.flush();
+      $httpBackend.flush(); //Responses are not returned until flush is called
       expect(ctrl.phones).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
     });
 
